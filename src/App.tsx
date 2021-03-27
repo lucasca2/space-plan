@@ -4,6 +4,7 @@ import GlobalStyle from 'styles/global';
 import theme from 'styles/theme';
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
+import 'typeface-poppins';
 
 const App = () => (
   <ThemeProvider theme={theme}>

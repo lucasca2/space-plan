@@ -1,6 +1,6 @@
 export default {
   title: 'default',
-  fontFamily: 'Barlow',
+  fontFamily: 'Poppins, serif',
   maxWidth: '1100px',
   spacing: {
     large: '50px',
