@@ -5,10 +5,12 @@ declare module 'styled-components' {
     title: string;
     fontFamily: string;
     maxWidth: string;
+    baseRadius: string;
     spacing: {
       large: string;
       medium: string;
       small: string;
+      ultraSmall: string;
     }
     colors: {
       primary: string;

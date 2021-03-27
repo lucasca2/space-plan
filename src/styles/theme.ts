@@ -2,10 +2,12 @@ export default {
   title: 'default',
   fontFamily: 'Poppins, serif',
   maxWidth: '1100px',
+  baseRadius: '4px',
   spacing: {
     large: '50px',
     medium: '25px',
     small: '15px',
+    ultraSmall: '5px',
   },
   colors: {
     primary: '#825DE3',
