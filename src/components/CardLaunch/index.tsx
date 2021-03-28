@@ -50,7 +50,7 @@ const CardLaunch: React.FC<TLaunch> = ({
           <Details>{details}</Details>
           {ships.length > 0 && (<Info>Ships:</Info>)}
           {ships?.map((ship) => (
-            <CardShip {...ship} />
+            <CardShip key={ship.name} {...ship} />
           ))}
         </>
       )}

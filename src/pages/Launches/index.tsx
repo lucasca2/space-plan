@@ -1,9 +1,11 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React from 'react';
 import { getLaunches } from 'services/launch';
 import CardLaunch from 'components/CardLaunch';
 import Loader from 'components/Loader';
 import Button from 'components/Button';
 import { TLaunch } from 'types/launch';
+import { useRecursiveList } from 'hooks/useRecursiveList';
+import { TParamsQuery } from 'types';
 import { WrapperAction } from './styles';
 
 /**
@@ -12,31 +14,12 @@ import { WrapperAction } from './styles';
  */
 
 const Launches: React.FC = () => {
-  const limit = 10;
-  const [launches, setLaunches] = useState<TLaunch[]>([]);
-  const [offset, setOffset] = useState(0);
-  const [reachedTheEnd, setReachedTheEnd] = useState(false);
-
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    async function getData() {
-      setIsLoading(true);
-
-      const data = await getLaunches({ offset, limit });
-
-      if (data.length < limit) setReachedTheEnd(true);
-
-      setLaunches((prev) => [...prev, ...data]);
-      setIsLoading(false);
-    }
-
-    getData();
-  }, [offset]);
-
-  const handleClickMoreData = useCallback(() => {
-    setOffset((prev) => prev + limit);
-  }, []);
+  const {
+    data: launches,
+    getMoreData,
+    isLoading,
+    reachedTheEnd,
+  } = useRecursiveList<TLaunch, TParamsQuery>(getLaunches);
 
   return (
     <>
@@ -44,11 +27,11 @@ const Launches: React.FC = () => {
         <Loader />
       )}
       {launches.map((launch) => (
-        <CardLaunch {...launch} />
+        <CardLaunch key={launch.id} {...launch} />
       ))}
       {(!reachedTheEnd && launches.length !== 0) && (
         <WrapperAction>
-          <Button width="250px" onClick={handleClickMoreData}>
+          <Button width="250px" onClick={getMoreData}>
             Carregar Mais
           </Button>
         </WrapperAction>

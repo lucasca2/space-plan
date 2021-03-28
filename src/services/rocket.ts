@@ -1,11 +1,7 @@
 import { gql } from '@apollo/client';
 import { TRocket } from 'types/rocket';
+import { TParamsQuery } from 'types';
 import Client from './client';
-
-type TParamsQuery = {
-  offset: number;
-  limit: number;
-}
 
 export async function getRockets({ offset, limit }: TParamsQuery): Promise<TRocket[]> {
   const { data: { rockets } } = await Client.query({

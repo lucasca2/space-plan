@@ -1,11 +1,7 @@
 import { gql } from '@apollo/client';
 import { TLaunch } from 'types/launch';
+import { TParamsQuery } from 'types';
 import Client from './client';
-
-type TParamsQuery = {
-  offset: number;
-  limit: number;
-}
 
 export async function getLaunches({ offset, limit }: TParamsQuery): Promise<TLaunch[]> {
   const { data: { launchesPast } } = await Client.query({
