@@ -7,6 +7,7 @@ import Button from 'components/Button';
 
 import { useRecursiveList } from 'hooks/useRecursiveList';
 import { TParamsQuery } from 'types';
+import Title from 'components/Title';
 import { WrapperAction } from './styles';
 
 const Rockets: React.FC = () => {
@@ -22,6 +23,7 @@ const Rockets: React.FC = () => {
       {isLoading && (
         <Loader />
       )}
+      <Title text="Rockets" />
       {rockets.map((rocket) => (
         <CardRocket key={rocket.id} {...rocket} />
       ))}

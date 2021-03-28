@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdAdd } from 'react-icons/md';
 import { getLaunches } from 'services/launch';
 import CardLaunch from 'components/CardLaunch';
 import Loader from 'components/Loader';
@@ -6,6 +7,8 @@ import Button from 'components/Button';
 import { TLaunch } from 'types/launch';
 import { useRecursiveList } from 'hooks/useRecursiveList';
 import { TParamsQuery } from 'types';
+import FloatButton from 'components/FloatButton';
+import Title from 'components/Title';
 import { WrapperAction } from './styles';
 
 /**
@@ -26,6 +29,7 @@ const Launches: React.FC = () => {
       {isLoading && (
         <Loader />
       )}
+      <Title text="Launches" />
       {launches.map((launch) => (
         <CardLaunch key={launch.id} {...launch} />
       ))}
@@ -36,6 +40,9 @@ const Launches: React.FC = () => {
           </Button>
         </WrapperAction>
       )}
+      <FloatButton>
+        <MdAdd />
+      </FloatButton>
     </>
   );
 };
