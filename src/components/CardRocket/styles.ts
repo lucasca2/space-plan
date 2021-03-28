@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Header = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,8 +23,9 @@ export const Title = styled.h2`
   margin-bottom: ${(p) => p.theme.spacing.ultraSmall};
 `;
 
-export const DateFormatted = styled.span`
+export const Payload = styled.span`
   opacity: .5;
+  margin: ${(p) => p.theme.spacing.ultraSmall}
 `;
 
 export const Info = styled.span`
@@ -32,11 +34,11 @@ export const Info = styled.span`
 `;
 
 export const Details = styled.span`
-  width: 100%;
   margin: ${(p) => p.theme.spacing.medium} 0;
 `;
 
 export const Footer = styled.div`
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;

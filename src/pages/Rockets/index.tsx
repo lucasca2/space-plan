@@ -1,20 +1,15 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { getLaunches } from 'services/launch';
-import CardLaunch from 'components/CardLaunch';
+import { TRocket } from 'types/rocket';
+import { getRockets } from 'services/rocket';
+import CardRocket from 'components/CardRocket';
 import Loader from 'components/Loader';
 import Button from 'components/Button';
 
-import { TCardLaunch } from 'components/CardLaunch/types';
 import { WrapperAction } from './styles';
 
-/**
- * Achei desnecessário fazer a função que altera a quantidade e resultados,
- * tendo em vista que configurei um "infinite scroll"
- */
-
-const Launch: React.FC = () => {
+const Rockets: React.FC = () => {
   const limit = 10;
-  const [launches, setLaunches] = useState<TCardLaunch[]>([]);
+  const [rockets, setRockets] = useState<TRocket[]>([]);
   const [offset, setOffset] = useState(0);
   const [reachedTheEnd, setReachedTheEnd] = useState(false);
 
@@ -24,11 +19,11 @@ const Launch: React.FC = () => {
     async function getData() {
       setIsLoading(true);
 
-      const data = await getLaunches({ offset, limit });
+      const data = await getRockets({ offset, limit });
 
-      if (data.length === 0) setReachedTheEnd(true);
+      if (data.length < limit) setReachedTheEnd(true);
 
-      setLaunches((prev) => [...prev, ...data]);
+      setRockets((prev) => [...prev, ...data]);
       setIsLoading(false);
     }
 
@@ -44,10 +39,10 @@ const Launch: React.FC = () => {
       {isLoading && (
         <Loader />
       )}
-      {launches.map((launch) => (
-        <CardLaunch {...launch} />
+      {rockets.map((rocket) => (
+        <CardRocket {...rocket} />
       ))}
-      {(!reachedTheEnd && launches.length !== 0) && (
+      {(!reachedTheEnd && rockets.length !== 0) && (
         <WrapperAction>
           <Button width="250px" onClick={handleClickMoreData}>
             Carregar Mais
@@ -58,4 +53,4 @@ const Launch: React.FC = () => {
   );
 };
 
-export default Launch;
+export default Rockets;

@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client';
-import { TCardLaunch } from 'components/CardLaunch/types';
+import { TLaunch } from 'types/launch';
 import Client from './client';
 
 type TParamsQuery = {
@@ -7,7 +7,7 @@ type TParamsQuery = {
   limit: number;
 }
 
-export async function getLaunches({ offset, limit }: TParamsQuery): Promise<TCardLaunch[]> {
+export async function getLaunches({ offset, limit }: TParamsQuery): Promise<TLaunch[]> {
   const { data: { launchesPast } } = await Client.query({
     query: gql`
       query GetLaunches {
@@ -23,6 +23,11 @@ export async function getLaunches({ offset, limit }: TParamsQuery): Promise<TCar
           launch_site {
             site_name
             site_name_long
+          }
+          ships {
+            name
+            image
+            type
           }
         }
       }

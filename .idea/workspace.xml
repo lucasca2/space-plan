@@ -2,22 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbc51d76-f4a6-4827-a0d1-c71e85a051e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Button/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Button/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CardLaunch/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CardLaunch/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CardLaunch/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Loader/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Loader/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Launch/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/launch.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CardLaunch/components/CardShip/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CardLaunch/components/CardShip/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CardRocket/components/CardShip/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CardRocket/components/CardShip/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CardRocket/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CardRocket/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Rockets/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Rockets/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/rocket.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/launch.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/rocket.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/AppLayout/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/AppLayout/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Launch/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Launch/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styled.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styled.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CardLaunch/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CardLaunch/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CardLaunch/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CardLaunch/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CardLaunch/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Launch/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Launches/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Launch/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Launches/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Splash/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Splash/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/launch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/launch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -50,6 +57,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/services" />
+      <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/layouts" />
     </key>
   </component>
@@ -61,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616850813000</updated>
-      <workItem from="1616850817066" duration="19182000" />
+      <workItem from="1616850817066" duration="25682000" />
     </task>
     <servers />
   </component>

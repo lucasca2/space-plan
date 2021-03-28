@@ -11,7 +11,7 @@ const Splash: React.FC = () => {
   useEffect(() => {
     setOpacity(1);
     setTimeout(() => {
-      history.push('/launch');
+      history.push('/launches');
     }, 1500);
   }, [history]);
 

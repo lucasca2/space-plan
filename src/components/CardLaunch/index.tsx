@@ -1,24 +1,30 @@
 import React, { useState } from 'react';
+import { format } from 'date-fns';
+
 import Button from 'components/Button';
-import { TCardLaunch } from './types';
+import { TLaunch } from 'types/launch';
 
 import {
   Wrapper,
   Header,
   Title,
-  Date,
+  DateFormatted,
   Info,
   Details,
   Footer,
 } from './styles';
 
-const CardLaunch: React.FC<TCardLaunch> = ({
+import CardShip from './components/CardShip';
+
+const CardLaunch: React.FC<TLaunch> = ({
   id,
   mission_name,
   launch_date_utc,
   launch_site,
   details,
-}: TCardLaunch) => {
+  rocket,
+  ships,
+}: TLaunch) => {
   const [showMore, setShowMore] = useState(false);
 
   return (
@@ -28,14 +34,26 @@ const CardLaunch: React.FC<TCardLaunch> = ({
           ID:&nbsp;
           {id}
         </Info>
-        <Date>{launch_date_utc}</Date>
+        <DateFormatted>{format(new Date(launch_date_utc), 'MMMM dd, yyyy')}</DateFormatted>
       </Header>
       <Title>{mission_name}</Title>
-      <Info>
-        Launch Site:&nbsp;
-        {launch_site?.site_name_long}
-      </Info>
-      <Details>{details}</Details>
+      {showMore && (
+        <>
+          <Info>
+            Launch Site:&nbsp;
+            {launch_site?.site_name_long}
+          </Info>
+          <Info>
+            Rocket:&nbsp;
+            {rocket.rocket_name}
+          </Info>
+          <Details>{details}</Details>
+          {ships.length > 0 && (<Info>Ships:</Info>)}
+          {ships?.map((ship) => (
+            <CardShip {...ship} />
+          ))}
+        </>
+      )}
 
       <Footer>
         <Button width="175px" onClick={() => setShowMore((prev) => !prev)}>
