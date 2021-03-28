@@ -46,12 +46,12 @@ const CardRocket: React.FC<TRocket> = ({
           </Info>
           <Info>
             Height:&nbsp;
-            {height.feet}
+            {height.feet?.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             ft
           </Info>
           <Info>
             Diameter:&nbsp;
-            {diameter.feet}
+            {diameter.feet?.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             ft
           </Info>
           <Info>
@@ -67,7 +67,7 @@ const CardRocket: React.FC<TRocket> = ({
               {'- '}
               {payload.name}
               {': '}
-              {payload.lb.toLocaleString('en-US')}
+              {payload.lb.toLocaleString('en-US', { maximumFractionDigits: 2 })}
               {' lb'}
             </Payload>
           ))}

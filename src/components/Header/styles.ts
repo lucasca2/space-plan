@@ -6,14 +6,14 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: ${(p) => `${p.theme.spacing.medium} ${p.theme.spacing.large}`};
+  padding: 0 ${(p) => p.theme.spacing.large};
   max-width: ${(p) => p.theme.maxWidth};
   margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 `;
 
 export const Logo = styled.img`
-  height: 100%;
+  padding: ${(p) => p.theme.spacing.medium} 0;
+  width: 175px;
 `;
