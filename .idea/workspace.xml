@@ -13,6 +13,7 @@
       <change afterPath="$PROJECT_DIR$/src/pages/SaveLaunch/styles.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/pages/SaveLaunch/validate.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CardLaunch/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CardLaunch/index.tsx" afterDir="false" />
@@ -80,7 +81,7 @@
       <updated>1616850813000</updated>
       <workItem from="1616850817066" duration="30526000" />
       <workItem from="1616965847769" duration="8102000" />
-      <workItem from="1617046671686" duration="9487000" />
+      <workItem from="1617046671686" duration="10203000" />
     </task>
     <servers />
   </component>

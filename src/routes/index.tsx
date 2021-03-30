@@ -20,7 +20,7 @@ const Routes: React.FC = () => (
     </Route>
     <AppLayout>
       <Route path="/launches" exact><Launches /></Route>
-      <Route path="/launches/save/:id?" exact><SaveLaunch /></Route>
+      <Route path="/launches/save" exact><SaveLaunch /></Route>
       <Route path="/rockets" exact><Rockets /></Route>
     </AppLayout>
     <Redirect to="/" />
