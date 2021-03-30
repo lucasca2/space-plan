@@ -3,6 +3,7 @@ import { transparentize } from 'polished';
 
 type TWrapper = {
   width?: string;
+  type?: "button" | "submit" | "reset" | undefined;
 }
 
 export const Wrapper = styled.button < TWrapper > `

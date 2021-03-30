@@ -31,8 +31,11 @@ const CardLaunch: React.FC<TLaunch> = ({
     <Wrapper>
       <Header>
         <Info>
-          ID:&nbsp;
-          {id}
+          {id === 'NEW LAUNCH' ? (
+            'NEW LAUNCH'
+          ) : (
+            `ID: ${id}`
+          )}
         </Info>
         <DateFormatted>{format(new Date(launch_date_utc), 'MMMM dd, yyyy')}</DateFormatted>
       </Header>

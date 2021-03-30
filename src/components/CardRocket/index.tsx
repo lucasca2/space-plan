@@ -61,7 +61,7 @@ const CardRocket: React.FC<TRocket> = ({
             {engines.type}
           </Info>
           <Details>{description}</Details>
-          <Info>Cargas:</Info>
+          <Info>Payloads:</Info>
           {payload_weights?.map((payload) => (
             <Payload key={payload.name}>
               {'- '}

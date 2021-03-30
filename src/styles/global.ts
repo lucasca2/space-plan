@@ -21,6 +21,11 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
   
+  input, select, option {
+    font-family: ${(p) => p.theme.fontFamily};
+    font-size: 14px;
+  }
+  
   button {
     font-family: ${(p) => p.theme.fontFamily};
     font-weight: 500;
@@ -36,4 +41,23 @@ export default createGlobalStyle`
     color: ${(p) => p.theme.colors.title};
     font-weight: 500;
   }
+
+
+  ::-webkit-input-placeholder {
+    color: ${(p) => p.theme.colors.placeholder};
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: ${(p) => p.theme.colors.placeholder};
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: ${(p) => p.theme.colors.placeholder};
+  }
+
+  :-ms-input-placeholder {
+    color: ${(p) => p.theme.colors.placeholder};
+  }
+  
+  
 `;

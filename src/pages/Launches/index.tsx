@@ -9,6 +9,7 @@ import { useRecursiveList } from 'hooks/useRecursiveList';
 import { TParamsQuery } from 'types';
 import FloatButton from 'components/FloatButton';
 import Title from 'components/Title';
+import { useHistory } from 'react-router-dom';
 import { WrapperAction } from './styles';
 
 /**
@@ -17,6 +18,7 @@ import { WrapperAction } from './styles';
  */
 
 const Launches: React.FC = () => {
+  const history = useHistory();
   const {
     data: launches,
     getMoreData,
@@ -41,7 +43,7 @@ const Launches: React.FC = () => {
         </WrapperAction>
       )}
       <FloatButton>
-        <MdAdd />
+        <MdAdd onClick={() => history.push('/launches/save')} />
       </FloatButton>
     </>
   );

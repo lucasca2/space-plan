@@ -8,6 +8,7 @@ import AppLayout from 'layouts/AppLayout';
 
 import Splash from 'pages/Splash';
 import Launches from 'pages/Launches';
+import SaveLaunch from 'pages/SaveLaunch';
 import Rockets from 'pages/Rockets';
 
 const Routes: React.FC = () => (
@@ -19,6 +20,7 @@ const Routes: React.FC = () => (
     </Route>
     <AppLayout>
       <Route path="/launches" exact><Launches /></Route>
+      <Route path="/launches/save/:id?" exact><SaveLaunch /></Route>
       <Route path="/rockets" exact><Rockets /></Route>
     </AppLayout>
     <Redirect to="/" />

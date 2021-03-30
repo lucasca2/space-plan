@@ -21,6 +21,7 @@ declare module 'styled-components' {
       background: string;
       title: string;
       text: string;
+      placeholder: string;
     };
   }
 }

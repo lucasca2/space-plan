@@ -18,5 +18,6 @@ export default {
     background: '#121214',
     title: '#E1E1E6',
     text: '#E1E1E6',
+    placeholder: '#E1E1E640',
   },
 };
